@@ -9,8 +9,8 @@ export const Descricacao = styled(P)`
 export const BotaoTema = styled.button`
   font-size: 10px;
   font-weight: bold;
-  color: #eeeeee;
-  background-color: #282a35;
+  color: ${(props) => props.theme.corDeFundo};
+  background-color: ${(props) => props.theme.corPrincipal};
   border-radius: 12px;
   padding: 8px;
   cursor: pointer;
@@ -20,4 +20,9 @@ export const SidebarContainer = styled.div`
   position: sticky;
   top: 80px;
   left: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
 `
